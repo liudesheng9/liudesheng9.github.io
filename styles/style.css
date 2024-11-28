@@ -51,6 +51,34 @@ body {
   border: 5px solid rgb(102, 8, 116);
 }
 
+.personal_space_body{
+  width: 1800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0 20px 20px 20px;
+  border: 5px solid rgb(102, 8, 116);
+}
+
+.image_container {
+  text-align: center;
+}
+
+.image_container img {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image_container img.shrink {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.image_container .img_text {
+  font-size: 12px;
+  color: rgb(190, 190, 190);
+  margin-top: 0px;
+}
+
 h1 {
   font-size: 26px;
   text-align: center;
@@ -65,6 +93,13 @@ h2 {
   margin: 0;
   padding: 15px 0;
   color: rgb(102, 8, 116);
+}
+
+.multiline_h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px; 
 }
 
 img {
