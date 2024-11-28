@@ -10,6 +10,25 @@
   font-style: italic;
 }
 
+.music_downloader {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
 nav {
   border-bottom: rgb(102, 8, 116) 5px solid;
 }
