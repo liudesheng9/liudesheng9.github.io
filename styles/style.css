@@ -66,6 +66,16 @@ body {
   padding-bottom: 5px;
 }
 
+.sub_contain_box_parents{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+}
+
+.sub_contain_box_child{
+  width: 50%;
+}
+
 .title_container {
   text-align: center;
 }
