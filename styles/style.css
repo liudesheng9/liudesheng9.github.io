@@ -10,8 +10,22 @@
   font-style: italic;
 }
 
+nav {
+  border-bottom: rgb(102, 8, 116) 5px solid;
+}
+
+.outer_links ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.outer_link {
+  display: inline-block;
+  margin-right: 20px;
+}
+
 body {
-  width: 1200px;
+  width: 600px;
   margin: 0 auto;
   background-color: #ffffff;
   padding: 0 20px 20px 20px;
@@ -24,7 +38,6 @@ h1 {
   margin: 0;
   padding: 20px 0;
   color: rgb(102, 8, 116);
-  text-shadow: 3px 3px 1px black;
 }
 
 img {
@@ -32,18 +45,10 @@ img {
   margin: 0 auto;
 }
 
-.div_outer_link {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 20;
-  right: 0;
-}
-
 p,
-li {
+li
+{
   font-size: 16px;
   line-height: 2;
   letter-spacing: 1px;
-  color: rgb(102, 8, 116);
 }
