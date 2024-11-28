@@ -53,7 +53,7 @@ body {
 
 .personal_space_body{
   /*width: 1800px;*/
-  width: auto;
+  width: 1800px;
   /*width: auto;*/
   margin: 0 auto;
   background-color: #ffffff;
@@ -62,13 +62,14 @@ body {
 }
 
 .contain_box{
-  padding-top: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding-bottom: 5px;
 }
 
 .sub_contain_box_parents{
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: flex;
 }
 
