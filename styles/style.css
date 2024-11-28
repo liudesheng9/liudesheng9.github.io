@@ -53,11 +53,17 @@ body {
 
 .personal_space_body{
   /*width: 1800px;*/
-  width: auto;
+  width: 1800px;
+  /*width: auto;*/
   margin: 0 auto;
   background-color: #ffffff;
   padding: 0 20px 20px 20px;
   border: 5px solid rgb(102, 8, 116);
+}
+
+.contain_box{
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .title_container {
@@ -80,12 +86,12 @@ body {
 
 .image_container img {
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 .image_container img.shrink {
   width: 80%;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 .image_container .img_text {
