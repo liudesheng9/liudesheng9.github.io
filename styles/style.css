@@ -10,6 +10,14 @@
   font-style: italic;
 }
 
+
+.teko-p {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .music_downloader {
   margin-top: 0px;
   margin-bottom: 0px;
