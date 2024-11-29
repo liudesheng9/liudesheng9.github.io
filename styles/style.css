@@ -127,6 +127,14 @@ h2 {
   color: rgb(102, 8, 116);
 }
 
+h3 {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 12px 0;
+  color: rgb(102, 8, 116);
+}
+
 .multiline_h2 {
   margin-top: 0px;
   margin-bottom: 0px;
