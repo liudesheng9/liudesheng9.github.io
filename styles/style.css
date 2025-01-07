@@ -1,7 +1,7 @@
 .dm-serif-text-regular {
-    font-family: "DM Serif Text", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .dm-serif-text-regular-italic {
@@ -22,21 +22,25 @@
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
-  padding-bottom: 0px; 
+  padding-bottom: 0px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
 }
-th, td {
+
+th,
+td {
   border: 1px solid black;
   padding: 10px;
   text-align: center;
 }
+
 th {
   background-color: #f2f2f2;
 }
+
 nav {
   border-bottom: rgb(102, 8, 116) 5px solid;
 }
@@ -59,7 +63,7 @@ body {
   border: 5px solid rgb(102, 8, 116);
 }
 
-.personal_space_body{
+.personal_space_body {
   /*width: 1800px;*/
   width: auto;
   /*width: auto;*/
@@ -69,19 +73,19 @@ body {
   border: 5px solid rgb(102, 8, 116);
 }
 
-.contain_box{
+.contain_box {
   margin-top: 5px;
   margin-bottom: 5px;
   padding-bottom: 5px;
 }
 
-.sub_contain_box_parents{
+.sub_contain_box_parents {
   margin-top: 5px;
   margin-bottom: 5px;
   display: flex;
 }
 
-.sub_contain_box_child{
+.sub_contain_box_child {
   width: 50%;
 }
 
@@ -93,7 +97,7 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
-  padding-bottom: 0px; 
+  padding-bottom: 0px;
   font-size: 20px;
   color: black;
 }
@@ -120,7 +124,7 @@ body {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 36px;
   text-align: center;
   margin: 0;
   padding: 20px 0;
@@ -128,7 +132,7 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 26px;
   text-align: center;
   margin: 0;
   padding: 15px 0;
@@ -136,7 +140,7 @@ h2 {
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
   margin: 0;
   padding: 12px 0;
@@ -147,7 +151,7 @@ h3 {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
-  padding-bottom: 0px; 
+  padding-bottom: 0px;
 }
 
 img {
@@ -156,8 +160,7 @@ img {
 }
 
 p,
-li
-{
+li {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 1px;
