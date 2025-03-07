@@ -7,23 +7,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
   <link href="../styles/style.css" rel="stylesheet" />
   <script src="../href_motion.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-    MathJax = {
+    window.MathJax = {
       tex: {
-        inlineMath: [["$", "$"]]
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
       }
     };
   </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <title>Home Page</title>
+  <title>Blog Archive</title>
 </head>
 
-<body>
-
+<body class="personal_space_body">
+  <script src="../href_motion.js"></script>
   <nav class="outer_links">
     <ol>
       <li class="outer_link"><a class="scale_bigger" href="https://github.com/liudesheng9/" target="_blank">Github</a>
@@ -32,18 +40,51 @@
     </ol>
   </nav>
   <h1>My Blogs</h1>
-  <h2 style="text-align: left;">2025</h2>
-  <h3 style="text-align: left;">2025-01-07</h3>
-  <ul>
-    <li><a href="../blogs/20250107.html" target="top">[Paper Reading] Lian Chen Credit Cycle 2024 Part1 Basic
-        Findings</a></li>
-  </ul>
-  <h2 style="text-align: left;">2024</h2>
-  <h3 style="text-align: left;">2024-11-29</h3>
-  <ul>
-    <li><a href="../blogs/20241129.html" target="top">Company utility function with 2 interventions</a></li>
-  </ul>
 
+  <div class="page-container">
+    <div class="column" style="flex: 1;">
+      <!-- 2025 Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-2025"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-2025">
+            <h2 class="multiline_h2">2025</h2>
+          </div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-2025"></div>
+        </div>
+
+        <div class="contain_box">
+          <div class="blog-entry">
+            <div class="blog-date">January 07, 2025</div>
+            <a href="../blogs/20250107.html" target="top">[Paper Reading] Lian Chen Credit Cycle 2024 Part1 Basic
+              Findings</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-2024"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-2024">
+            <h2 class="multiline_h2">2024</h2>
+          </div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-2024"></div>
+        </div>
+
+        <div class="contain_box">
+          <div class="blog-entry">
+            <div class="blog-date">November 29, 2024</div>
+            <a href="../blogs/20241129.html" target="top">Company utility function with 2 interventions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

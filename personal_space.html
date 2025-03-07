@@ -1,236 +1,347 @@
 <!doctype html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet" />
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet" />
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
-    <title>Personal Space</title>
-  </head>
-  <body class="personal_space_body">
+  <title>Personal Space</title>
+</head>
+
+<body class="personal_space_body">
   <script src="href_motion.js"></script>
-    <nav class="outer_links">
-      <ol>
-        <li class="outer_link"><a class="scale_bigger" href="https://github.com/liudesheng9/" target="_blank">Github</a></li>
-        <li class="outer_link"><a class="scale_bigger" href="index.html" target="top">Home page</a></li>
-      </ol>
-    </nav>
-    <h1>Personal Space</h1>
-    <div style="display: flex;">
-      <div style="flex-grow: 0; flex-shrink: 0; width: 40%">
-        <div class="title_bar">
-          <div style="position: relative; height: 5px; background-color: rgb(202, 255, 237);"></div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div class="title_container" style="background-color: rgb(202, 255, 237);">
+  <nav class="outer_links">
+    <ol>
+      <li class="outer_link"><a class="scale_bigger" href="https://github.com/liudesheng9/" target="_blank">Github</a>
+      </li>
+      <li class="outer_link"><a class="scale_bigger" href="index.html" target="top">Home page</a></li>
+    </ol>
+  </nav>
+  <h1>Personal Space</h1>
+
+  <div class="page-container">
+    <!-- Left Column -->
+    <div class="column column-left">
+      <!-- Music Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-mint"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-mint">
             <h2>Music</h2>
           </div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div style="position: relative; height: 5px; background-color: rgb(202, 255, 237);"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-mint"></div>
         </div>
+
         <div class="contain_box">
-          <table>
-            <thead>
-              <tr>
-                <th class="dm-serif-text-regular">Music name</th>
-                <th class="dm-serif-text-regular">Player</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>lube: Батька Махно</td>
-                <td>
-                  <figure>
-                  <audio controls src="media/music/lube_Батька_Махно.mp3"></audio>
-                  <p class="music_downloader">
-                    <a href="media/music/lube_Батька_Махно.mp3""> Download audio </a>
-                  </p>
-                  </figure>
-                </td>
-              </tr>
-              <tr>
-                <td>Frank Klepacki: Machines Collide</td>
-                <td>
-                  <figure>
-                  <audio controls src="media/music/Frank_Klepacki_Machines_Collide.mp3"></audio>
-                  <p class="music_downloader">
-                    <a href="media/music/Frank_Klepacki_Machines_Collide.mp3"> Download audio </a>
-                  </p>
-                  </figure>
-                </td>
-              </tr>
-              <tr>
-                <td>Skywire: Main Theme</td>
-                <td>
-                  <figure>
-                  <audio controls src="/media/music/Skywire_main_theme.mp3"></audio>
-                  <p class="music_downloader">
-                    <a href="/media/music/Skywire_main_theme.mp3"> Download audio </a>
-                  </p>
-                  </figure>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p style="font-size: 16px; line-height: 2; letter-spacing: 1px; text-align: right;">
+          <div class="music-collection">
+            <div class="music-card">
+              <div class="music-name">lube: Батька Махно</div>
+              <div class="music-player">
+                <audio controls src="media/music/lube_Батька_Махно.mp3"></audio>
+                <p class="music_downloader">
+                  <a href="media/music/lube_Батька_Махно.mp3">Download audio</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="music-card">
+              <div class="music-name">Frank Klepacki: Machines Collide</div>
+              <div class="music-player">
+                <audio controls src="media/music/Frank_Klepacki_Machines_Collide.mp3"></audio>
+                <p class="music_downloader">
+                  <a href="media/music/Frank_Klepacki_Machines_Collide.mp3">Download audio</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="music-card">
+              <div class="music-name">Skywire: Main Theme</div>
+              <div class="music-player">
+                <audio controls src="/media/music/Skywire_main_theme.mp3"></audio>
+                <p class="music_downloader">
+                  <a href="/media/music/Skywire_main_theme.mp3">Download audio</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <p style="text-align: right;">
             <a href="sub_pages/music_subpage.html" target="top">More music...</a>
           </p>
         </div>
-        <div class="title_bar">
-          <div style="position: relative; height: 5px; background-color: red;"></div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div class="title_container" style="background-color: red;">
-            <h2 style="color:white;">Blogs</h2>
+      </div>
+
+      <!-- Blogs Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-red"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-red">
+            <h2>Blogs</h2>
           </div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div style="position: relative; height: 5px; background-color: red;"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-red"></div>
         </div>
+
         <div class="contain_box">
-          <p style="font-size: 16px; line-height: 2; letter-spacing: 1px; text-align: right;">
+          <p style="text-align: right;">
             <a href="sub_pages/blog_subpage.html" target="top">More blogs...</a>
           </p>
         </div>
-        <div class="title_bar">
-          <div style="position: relative; height: 5px; background-color: #3ab0a8;"></div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div class="title_container" style="background-color: #3ab0a8;">
-            <h2 style="color:#5c1a9e;">Course Archive</h2>
+      </div>
+
+      <!-- Course Archive Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-teal"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-teal">
+            <h2>Course Archive</h2>
           </div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div style="position: relative; height: 5px; background-color: #3ab0a8;"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-teal"></div>
         </div>
+
         <div class="contain_box">
-          <p style="font-size: 16px; line-height: 2; letter-spacing: 1px; text-align: right;">
+          <p style="text-align: right;">
             <a href="sub_pages/course_archive.html" target="top">More courses...</a>
           </p>
         </div>
       </div>
-      <div style="position: relative; width: 2%; opacity: 0;"></div>
-      <div style="flex-grow: 0; flex-shrink: 0; width: 20%">
-        <div class="title_bar">
-          <div style="position: relative; height: 5px; background-color: rgb(102, 8, 116);"></div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div class="title_container" style="background-color: rgb(102, 8, 116);">
-            <h2 class="multiline_h2" style="color:white;">Tsinghua University</h2>
+    </div>
+
+    <!-- Middle Column -->
+    <div class="column column-middle">
+      <!-- GitHub Repositories Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-github"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-github">
+            <h2 class="multiline_h2">GitHub Repositories</h2>
           </div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div style="position: relative; height: 5px; background-color: rgb(102, 8, 116);"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-github"></div>
         </div>
+
         <div class="contain_box">
-          <div class="image_container" >
+          <div class="repo-card">
+            <div class="repo-name">screenshot</div>
+            <div class="repo-description">A screenshot tool for Windows</div>
+            <div class="repo-stats">
+              <div class="repo-language">
+                <span class="repo-language-color lang-go"></span>
+                <span>Go</span>
+              </div>
+              <div class="repo-stars">★ 0</div>
+              <div class="repo-forks">⑂ 0</div>
+            </div>
+            <p style="margin-top: 10px;">
+              <a class="repo-link" href="https://github.com/liudesheng9/screenshot" target="_blank">View
+                Repository</a>
+            </p>
+          </div>
+
+          <div class="repo-card">
+            <div class="repo-name">Relational-Data-Fuzzy-Matching</div>
+            <div class="repo-description">Relational Data Fuzzy Matching Algorithm</div>
+            <div class="repo-stats">
+              <div class="repo-language">
+                <span class="repo-language-color lang-python"></span>
+                <span>Python</span>
+              </div>
+              <div class="repo-stars">★ 0</div>
+              <div class="repo-forks">⑂ 0</div>
+            </div>
+            <p style="margin-top: 10px;">
+              <a class="repo-link" href="https://github.com/liudesheng9/data-analysis-tools" target="_blank">View
+                Repository</a>
+            </p>
+          </div>
+
+          <div class="repo-card">
+            <div class="repo-name">liudesheng9.github.io</div>
+            <div class="repo-description">Repo for this website</div>
+            <div class="repo-stats">
+              <div class="repo-language">
+                <span class="repo-language-color lang-html"></span>
+                <span>HTML</span>
+              </div>
+              <div class="repo-stars">★ 0</div>
+              <div class="repo-forks">⑂ 0</div>
+            </div>
+            <p style="margin-top: 10px;">
+              <a class="repo-link" href="https://github.com/liudesheng9/econ-simulations" target="_blank">View
+                Repository</a>
+            </p>
+          </div>
+
+          <p style="text-align: right;">
+            <a href="https://github.com/liudesheng9?tab=repositories" target="_blank">View all repositories</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Tsinghua University Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-purple"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-purple">
+            <h2 class="multiline_h2">Tsinghua University</h2>
+          </div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-purple"></div>
+        </div>
+
+        <div class="contain_box">
+          <div class="image_container">
             <img src="media/img/tsinghua_gate.jpg" alt="Tsinghua Gate">
-            <div class="img_text">
-              Tsinghua University
-            </div>
-          </div>
-        </div>
-        <div class="title_bar">
-          <div style="position: relative; height: 5px; background-color: #003262;"></div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div class="title_container" style="background-color: #003262;">
-            <h2 class="multiline_h2" style="color:#FDB515;">UCB</h2>
-          </div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div style="position: relative; height: 5px; background-color: #003262;"></div>
-        </div>
-        <div class="contain_box">
-          <div class="image_container" >
-            <img src="media/img/Sather_tower.jpg" alt="Sather tower">
-            <div class="img_text">
-              Sather tower. Notice that two clocks have 7 minutes difference.
-            </div>
+            <div class="img_text">Tsinghua University</div>
           </div>
         </div>
       </div>
-      <div style="position: relative; width: 2%; opacity: 0;"></div>
-      <div style="flex-grow: 0; flex-shrink: 0; width: 36%">
-        <div class="title_bar">
-          <div style="position: relative; height: 5px; background-color: aquamarine;"></div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div class="title_container" style="background-color: aquamarine;">
-            <h2 class="multiline_h2" style="color:red;">Humanity must become Multiplanetary</h2>
-            <h2 class="multiline_h2" style="color:red;">before the next Extinction Level Event!!</h2>
+
+      <!-- UCB Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-berkeley"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-berkeley">
+            <h2 class="multiline_h2">UCB</h2>
           </div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div style="position: relative; height: 5px; background-color: aquamarine;"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-berkeley"></div>
         </div>
+
+        <div class="contain_box">
+          <div class="image_container">
+            <img src="media/img/Sather_tower.jpg" alt="Sather tower">
+            <div class="img_text">Sather tower. Notice that two clocks have 7 minutes difference.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="column column-right">
+      <!-- Multiplanetary Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-aqua"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-aqua">
+            <h2 class="multiline_h2">Humanity must become Multiplanetary</h2>
+            <h2 class="multiline_h2">before the next Extinction Level Event!!</h2>
+          </div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-aqua"></div>
+        </div>
+
         <div class="contain_box">
           <div class="sub_contain_box_parents">
             <div class="sub_contain_box_child">
-              <div class="image_container" >
+              <div class="image_container">
                 <img class="shrink" src="media/img/starship_B12.jpg" alt="starship_B12">
-                <div class="img_text">
-                  Booster 12 back to earth, from SpaceX.
-                </div>
+                <div class="img_text">Booster 12 back to earth, from SpaceX.</div>
               </div>
             </div>
             <div class="sub_contain_box_child">
-              <div class="image_container" >
+              <div class="image_container">
                 <img class="shrink" style="width: 70%;" src="media/img/Константин_Циолковский.jpg" alt="Циолковский">
                 <div class="img_text">
-                  Константин_Циолковский, from <a href="https://en.wikipedia.org/wiki/Konstantin_Tsiolkovsky#/media/File:%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%A6%D0%B8%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9.jpg" target="_blank">Wikipedia</a>.
+                  Константин_Циолковский, from <a
+                    href="https://en.wikipedia.org/wiki/Konstantin_Tsiolkovsky#/media/File:%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%A6%D0%B8%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9.jpg"
+                    target="_blank">Wikipedia</a>.
                 </div>
               </div>
-              <p style="color: gray; font-size: 20px;line-height: 1.2;">
-                "The Earth is the cradle of mankind, but mankind cannot stay in the cradle forever." - Konstantin Tsiolkovsky
+              <p style="color: gray; font-size: 20px; line-height: 1.2;">
+                "The Earth is the cradle of mankind, but mankind cannot stay in the cradle forever." - Konstantin
+                Tsiolkovsky
               </p>
             </div>
           </div>
-          <div class="contain_box" style="width: 100%; background-color: #FDB515; padding-bottom: 0px;">
-            <p class="teko-p" style="font-size: 20px; line-height: 1; letter-spacing: 0.5px; text-align: center">
+          <div class="event-banner">
+            <p class="teko-p" style="font-size: 20px; margin: 0;">
               Event: Starship test flight 7 is scheduled for no earlier than January 11th 2025.
             </p>
           </div>
         </div>
-        <div class="title_bar">
-          <div style="position: relative; height: 5px; background-color: gold;"></div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div class="title_container" style="background-color: gold;">
-            <h2 class="multiline_h2">Mathmatical Formula</h2>
+      </div>
+
+      <!-- Mathematical Formula Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-gold"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-gold">
+            <h2 class="multiline_h2">Mathematical Formula</h2>
           </div>
-          <div style="position: relative; height: 5px; opacity: 0;"></div>
-          <div style="position: relative; height: 5px; background-color: gold;"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-gold"></div>
         </div>
-        <div class="contain_box" style="background-color: rgb(202, 255, 237);">
-          <p type="dm-serif-text-regular-italic">
+
+        <div class="contain_box theme-formula">
+          <p type="dm-serif-text-regular-italic" class="math-formula">
             Inverse of the sum of matrix, <strong>Henderson & Searle (1981)</strong>:
           </p>
-          <p type="dm-serif-text-regular-italic">
+          <div class="math-formula">
             $$
             (A+buv')^{-1}=A^{-1}-\frac{b}{1+bv'A^{-1}u}A^{-1}uv'A^{-1}
             $$
-          </p>
+          </div>
         </div>
-        <div class="contain_box" style="background-color: rgb(202, 255, 237);">
-          <p type="dm-serif-text-regular-italic">
+
+        <div class="contain_box theme-formula">
+          <p type="dm-serif-text-regular-italic" class="math-formula">
             Taylor expansion of Leontief inverse matrix:
           </p>
-          <p type="dm-serif-text-regular-italic">
+          <div class="math-formula">
             $$
             \left[ I-\beta G \right]^{-1}=I+\beta G+\beta^2 G^2+\beta^3 G^3+\cdots
             $$
-          </p>
+          </div>
         </div>
-        <div class="contain_box" style="background-color: rgb(202, 255, 237);">
-          <p type="dm-serif-text-regular-italic">
+
+        <div class="contain_box theme-formula">
+          <p type="dm-serif-text-regular-italic" class="math-formula">
             Rayleigh quotient:
           </p>
-          <p type="dm-serif-text-regular-italic">
+          <div class="math-formula">
             $$
             \begin{aligned}
             R(x)=\frac{x^TAx}{x^Tx}\\
             \lambda_1 \geq R(x) \geq \lambda_n
             \end{aligned}
             $$
-          </p>
+          </div>
         </div>
       </div>
     </div>
-    
-  </body>
+  </div>
+</body>
+
 </html>

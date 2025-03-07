@@ -1,38 +1,69 @@
 <!doctype html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-    <link href="../styles/style.css" rel="stylesheet" />
-    <script src="../href_motion.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-      MathJax = {
-          tex: {
-              inlineMath: [["$", "$"]]
-          }
-      };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-    
-    <title>Home Page</title>
-  </head>
-  <body>
-    
-    <nav class="outer_links">
-      <ol>
-        <li class="outer_link"><a class="scale_bigger" href="https://github.com/liudesheng9/" target="_blank">Github</a></li>
-        <li class="outer_link"><a class="scale_bigger" href="../personal_space.html" target="top">Personal Space</a></li>
-      </ol>
-    </nav>
-    <h1>Course Archive</h1>
-    <h2 style="text-align: left;">2024 Fall</h2>
-    <ul>
-      <li><a href="../course_archive/econ_240a.html" target="top">Econ 240A</a></li>
-    </ul>
 
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="../styles/style.css" rel="stylesheet" />
+  <script src="../href_motion.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <title>Course Archive</title>
+</head>
+
+<body class="personal_space_body">
+  <script src="../href_motion.js"></script>
+  <nav class="outer_links">
+    <ol>
+      <li class="outer_link"><a class="scale_bigger" href="https://github.com/liudesheng9/" target="_blank">Github</a>
+      </li>
+      <li class="outer_link"><a class="scale_bigger" href="../personal_space.html" target="top">Personal Space</a></li>
+    </ol>
+  </nav>
+  <h1>Course Archive</h1>
+
+  <div class="page-container">
+    <div class="column" style="flex: 1;">
+      <!-- 2024 Fall Section -->
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-teal"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-teal">
+            <h2 class="multiline_h2">2024 Fall</h2>
+          </div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-teal"></div>
+        </div>
+
+        <div class="contain_box">
+          <div class="blog-entry">
+            <div class="blog-date">Economics</div>
+            <a href="../course_archive/econ_240a.html" target="top">Econ 240A: Econometrics</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

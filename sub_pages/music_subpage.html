@@ -1,77 +1,89 @@
 <!doctype html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-    <link href="../styles/style.css" rel="stylesheet" />
-    <script src="../href_motion.js"></script>
-    <title>Home Page</title>
-  </head>
-  <body>
-    
-    <nav class="outer_links">
-      <ol>
-        <li class="outer_link"><a class="scale_bigger" href="https://github.com/liudesheng9/" target="_blank">Github</a></li>
-        <li class="outer_link"><a class="scale_bigger" href="../personal_space.html" target="top">Personal Space</a></li>
-      </ol>
-    </nav>
-    <h1>Music Archive</h1>
-    <table>
-        <thead>
-          <tr>
-            <th class="dm-serif-text-regular">Music name</th>
-            <th class="dm-serif-text-regular">Player</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>lube: Батька Махно</td>
-            <td>
-              <figure>
-              <audio controls src="../media/music/lube_Батька_Махно.mp3"></audio>
-              <p class="music_downloader">
-                <a href="../media/music/lube_Батька_Махно.mp3"> Download audio </a>
-              </p>
-              </figure>
-            </td>
-          </tr>
-          <tr>
-            <td>Frank Klepacki: Machines Collide</td>
-            <td>
-              <figure>
-              <audio controls src="../media/music/Frank_Klepacki_Machines_Collide.mp3"></audio>
-              <p class="music_downloader">
-                <a href="../media/music/Frank_Klepacki_Machines_Collide.mp3"> Download audio </a>
-              </p>
-              </figure>
-            </td>
-          </tr>
-          <tr>
-            <td>Skywire: Main Theme</td>
-            <td>
-              <figure>
-              <audio controls src="../media/music/Skywire_main_theme.mp3"></audio>
-              <p class="music_downloader">
-                <a href="../media/music/Skywire_main_theme.mp3"> Download audio </a>
-              </p>
-              </figure>
-            </td>
-          </tr>
-          <tr>
-            <td>Dede Efendi: Ey Büti Nev Eda</td>
-            <td>
-              <figure>
-              <audio controls src="../media/music/Dede_Efendi_Ey_Büti_Nev_Eda.mp3"></audio>
-              <p class="music_downloader">
-                <a href="../media/music/Dede_Efendi_Ey_Büti_Nev_Eda.mp3"> Download audio </a>
-              </p>
-              </figure>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="../styles/style.css" rel="stylesheet" />
+  <script src="../href_motion.js"></script>
+  <title>Music Archive</title>
+</head>
+
+<body class="personal_space_body">
+  <script src="../href_motion.js"></script>
+  <nav class="outer_links">
+    <ol>
+      <li class="outer_link"><a class="scale_bigger" href="https://github.com/liudesheng9/" target="_blank">Github</a>
+      </li>
+      <li class="outer_link"><a class="scale_bigger" href="../personal_space.html" target="top">Personal Space</a></li>
+    </ol>
+  </nav>
+  <h1>Music Archive</h1>
+
+  <div class="page-container">
+    <div class="column" style="flex: 1;">
+      <div class="section-container">
+        <div class="title-bar">
+          <div class="title-bar-line theme-mint"></div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-container theme-mint">
+            <h2 class="multiline_h2">Music Collection</h2>
+          </div>
+          <div class="title-bar-spacer"></div>
+          <div class="title-bar-line theme-mint"></div>
+        </div>
+
+        <div class="contain_box">
+          <div class="music-collection">
+            <div class="music-card">
+              <div class="music-name">lube: Батька Махно</div>
+              <div class="music-player">
+                <audio controls src="../media/music/lube_Батька_Махно.mp3"></audio>
+                <p class="music_downloader">
+                  <a href="../media/music/lube_Батька_Махно.mp3">Download audio</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="music-card">
+              <div class="music-name">Frank Klepacki: Machines Collide</div>
+              <div class="music-player">
+                <audio controls src="../media/music/Frank_Klepacki_Machines_Collide.mp3"></audio>
+                <p class="music_downloader">
+                  <a href="../media/music/Frank_Klepacki_Machines_Collide.mp3">Download audio</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="music-card">
+              <div class="music-name">Skywire: Main Theme</div>
+              <div class="music-player">
+                <audio controls src="../media/music/Skywire_main_theme.mp3"></audio>
+                <p class="music_downloader">
+                  <a href="../media/music/Skywire_main_theme.mp3">Download audio</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="music-card">
+              <div class="music-name">Dede Efendi: Ey Büti Nev Eda</div>
+              <div class="music-player">
+                <audio controls src="../media/music/Dede_Efendi_Ey_Büti_Nev_Eda.mp3"></audio>
+                <p class="music_downloader">
+                  <a href="../media/music/Dede_Efendi_Ey_Büti_Nev_Eda.mp3">Download audio</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
