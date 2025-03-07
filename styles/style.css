@@ -568,10 +568,11 @@ audio {
 }
 
 .music-name {
-  font-weight: bold;
-  font-size: 18px;
-  margin: 0 0 8px 0;
-  font-family: "DM Serif Text", serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: #2d3748;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .music-player {
