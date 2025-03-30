@@ -3,30 +3,15 @@
 const fs = require('fs-extra');
 const path = require('path');
 const readline = require('readline');
+const { addBlogPost, generateBlogPages } = require('./blog-generator');
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-// Get current date in YYYYMMDD format
-function getTodayDate() {
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-    const day = String(now.getDate()).padStart(2, '0');
-    return `${year}${month}${day}`;
-}
-
 // Create a new markdown file template
-function createMarkdownTemplate(title) {
-    const today = new Date();
-    const dateString = today.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-
+function createMarkdownTemplate(title, dateString) {
     return `# ${title}
 
 *${dateString}*
@@ -91,17 +76,51 @@ function example() {
 `;
 }
 
+// Format date as Month DD, YYYY
+function formatDisplayDate(date) {
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
 // Create a new blog post
-async function createNewPost() {
+async function createNewBlogPost() {
     console.log('Creating a new blog post...');
 
-    // Get title from user
-    rl.question('Enter the blog post title: ', async (title) => {
+    try {
+        // Get title from user
+        const title = await new Promise(resolve => {
+            rl.question('Enter the blog post title: ', answer => resolve(answer));
+        });
+
         if (!title.trim()) {
             console.error('Title cannot be empty!');
             rl.close();
             return;
         }
+
+        // Get custom date or use today
+        const dateInput = await new Promise(resolve => {
+            rl.question('Enter post date (YYYY-MM-DD) or leave blank for today: ', answer => resolve(answer));
+        });
+
+        let postDate = new Date();
+        if (dateInput.trim()) {
+            postDate = new Date(dateInput);
+            if (isNaN(postDate.getTime())) {
+                console.error('Invalid date format. Using today\'s date instead.');
+                postDate = new Date();
+            }
+        }
+
+        // Format date for file
+        const year = postDate.getFullYear();
+        const month = String(postDate.getMonth() + 1).padStart(2, '0');
+        const day = String(postDate.getDate()).padStart(2, '0');
+        const dateString = `${year}-${month}-${day}`;
+        const displayDate = formatDisplayDate(postDate);
 
         // Create filename from title
         const filename = title
@@ -121,7 +140,7 @@ async function createNewPost() {
         }
 
         // Create markdown content
-        const content = createMarkdownTemplate(title);
+        const content = createMarkdownTemplate(title, displayDate);
 
         // Ensure directory exists
         await fs.ensureDir(markdownDir);
@@ -130,30 +149,22 @@ async function createNewPost() {
         await fs.writeFile(filePath, content);
         console.log(`Created new blog post: ${filePath}`);
 
-        // Generate date for HTML file
-        const today = new Date();
-        const year = today.getFullYear();
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const day = String(today.getDate()).padStart(2, '0');
-        const htmlFilename = `${year}${month}${day}.html`;
+        // Add to blogs.json
+        await addBlogPost(title, dateString, filename);
 
         console.log(`\nNext steps:`);
         console.log(`1. Edit your new post in ${filePath}`);
-        console.log(`2. Add the following to build.js in the build function:`);
-        console.log(`
-  await processMarkdownFile(
-    path.join(markdownDir, '${filename}'),
-    path.join(outputDir, '${htmlFilename}')
-  );`);
-        console.log(`3. Add a link to your blog archive in sub_pages/blog_subpage.html`);
-        console.log(`4. Run "npm run build" to generate the HTML file`);
+        console.log(`2. Run "node blog-generator.js" to generate the HTML file`);
 
         rl.close();
-    });
+    } catch (error) {
+        console.error('Error:', error);
+        rl.close();
+    }
 }
 
 // Run the script
-createNewPost().catch(err => {
+createNewBlogPost().catch(err => {
     console.error('Error:', err);
     rl.close();
     process.exit(1);

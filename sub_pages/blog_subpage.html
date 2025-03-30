@@ -43,58 +43,142 @@
   <h1>My Blogs</h1>
 
   <div class="page-container">
-    <div class="column" style="flex: 1;">
-      <!-- 2025 Section -->
-      <div class="section-container">
-        <div class="title-bar">
-          <div class="title-bar-line theme-2025"></div>
-          <div class="title-bar-spacer"></div>
-          <div class="title-container theme-2025">
-            <h2 class="multiline_h2">2025</h2>
-          </div>
-          <div class="title-bar-spacer"></div>
-          <div class="title-bar-line theme-2025"></div>
-        </div>
-
-        <div class="contain_box">
-          <div class="blog-entry">
-            <div class="blog-date">March 30, 2025</div>
-            <a href="../blogs/20250330.html" target="top">Debt Overhang<br>
-              Model Writeup (Twisting Pecking Order Theory)
-            </a>
-          </div>
-        </div>
-
-        <div class="contain_box">
-          <div class="blog-entry">
-            <div class="blog-date">January 07, 2025</div>
-            <a href="../blogs/20250107.html" target="top">[Paper Reading] Lian Chen Credit Cycle 2024 Part1 Basic
-              Findings</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2024 Section -->
-      <div class="section-container">
-        <div class="title-bar">
-          <div class="title-bar-line theme-2024"></div>
-          <div class="title-bar-spacer"></div>
-          <div class="title-container theme-2024">
-            <h2 class="multiline_h2">2024</h2>
-          </div>
-          <div class="title-bar-spacer"></div>
-          <div class="title-bar-line theme-2024"></div>
-        </div>
-
-        <div class="contain_box">
-          <div class="blog-entry">
-            <div class="blog-date">November 29, 2024</div>
-            <a href="../blogs/20241129.html" target="top">Company utility function with 2 interventions</a>
-          </div>
-        </div>
-      </div>
+    <div class="column" style="flex: 1;" id="blog-container">
+      <!-- Blog entries will be generated here -->
+      <div class="loading">Loading blogs...</div>
     </div>
   </div>
+
+  <script>
+    // Function to format date
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+      return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    }
+
+    // Function to group blogs by year
+    function groupBlogsByYear(blogs) {
+      const groupedByYear = {};
+
+      blogs.forEach(blog => {
+        const year = blog.date.split('-')[0];
+        if (!groupedByYear[year]) {
+          groupedByYear[year] = [];
+        }
+        groupedByYear[year].push(blog);
+      });
+
+      return groupedByYear;
+    }
+
+    // Function to group blogs by date within year
+    function groupBlogsByDate(blogs) {
+      const groupedByDate = {};
+
+      blogs.forEach(blog => {
+        if (!groupedByDate[blog.date]) {
+          groupedByDate[blog.date] = [];
+        }
+        groupedByDate[blog.date].push(blog);
+      });
+
+      return groupedByDate;
+    }
+
+    // Function to create blog entries HTML
+    function createBlogEntriesHTML(years) {
+      let html = '';
+
+      // Sort years in descending order
+      const sortedYears = Object.keys(years).sort((a, b) => b - a);
+
+      sortedYears.forEach(year => {
+        // Create year section header
+        html += `
+          <div class="section-container">
+            <div class="title-bar">
+              <div class="title-bar-line theme-${year}"></div>
+              <div class="title-bar-spacer"></div>
+              <div class="title-container theme-${year}">
+                <h2 class="multiline_h2">${year}</h2>
+              </div>
+              <div class="title-bar-spacer"></div>
+              <div class="title-bar-line theme-${year}"></div>
+            </div>
+        `;
+
+        // Group blogs by date within this year
+        const blogsByDate = groupBlogsByDate(years[year]);
+
+        // Sort dates in descending order
+        const sortedDates = Object.keys(blogsByDate).sort((a, b) => new Date(b) - new Date(a));
+
+        // Create blog entries for each date
+        sortedDates.forEach(date => {
+          const blogs = blogsByDate[date];
+          const formattedDate = formatDate(date);
+
+          html += `<div class="contain_box_date_blog">`;
+
+          // Add each blog for this date
+          blogs.forEach(blog => {
+            html += `
+              <div class="blog-entry">
+                <div class="blog-date">${formattedDate}</div>
+                <a href="../blogs/${blog.slug}.html" target="top">${blog.title}</a>
+              </div>
+            `;
+          });
+
+          html += `</div>`;
+        });
+
+        // Close year section
+        html += `</div>`;
+      });
+
+      return html;
+    }
+
+    // Fetch blogs data and generate the page
+    async function loadBlogs() {
+      try {
+        const response = await fetch('../blogs.json');
+        if (!response.ok) {
+          throw new Error('Failed to load blogs data');
+        }
+
+        const data = await response.json();
+        const blogs = data.blogs || [];
+
+        if (blogs.length === 0) {
+          document.getElementById('blog-container').innerHTML = '<p>No blogs found.</p>';
+          return;
+        }
+
+        // Group blogs by year
+        const blogsByYear = groupBlogsByYear(blogs);
+
+        // Generate HTML
+        const blogContainerHtml = createBlogEntriesHTML(blogsByYear);
+
+        // Update the page
+        document.getElementById('blog-container').innerHTML = blogContainerHtml;
+
+      } catch (error) {
+        console.error('Error loading blogs:', error);
+        document.getElementById('blog-container').innerHTML =
+          `<p>Error loading blogs: ${error.message}. Please try refreshing the page.</p>`;
+      }
+    }
+
+    // Load blogs when the page loads
+    document.addEventListener('DOMContentLoaded', loadBlogs);
+  </script>
 </body>
 
 </html>

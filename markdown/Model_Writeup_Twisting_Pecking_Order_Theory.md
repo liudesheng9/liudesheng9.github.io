@@ -1,5 +1,5 @@
 
-## Model Writeup (Twisting Pecking Order Theory)
+# Model Writeup (Twisting Pecking Order Theory)
 
 
 ### 1. What Does the Author Want to Show?

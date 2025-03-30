@@ -4,14 +4,12 @@
     "description": "Personal website with markdown and LaTeX rendering",
     "main": "index.js",
     "scripts": {
-        "build": "node build.js",
+        "build": "node blog-generator.js",
         "serve": "http-server . -p 55000",
-        "new-post": "node blog-manager.js add",
-        "list-posts": "node blog-manager.js list",
-        "update-archive": "node blog-manager.js archive",
-        "start": "node build.js && http-server . -p 55000",
+        "new-post": "node add-blog.js",
+        "start": "node blog-generator.js && http-server . -p 55000",
         "install-deps": "node install.js",
-        "deploy": "node build.js && node blog-manager.js archive"
+        "deploy": "node blog-generator.js"
     },
     "dependencies": {
         "fs-extra": "^11.1.1",
