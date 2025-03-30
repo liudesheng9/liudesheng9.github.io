@@ -69,7 +69,6 @@ body {
   margin: 0 auto;
   background-color: #ffffff;
   padding: 0 20px 20px 20px;
-  border: 5px solid rgb(102, 8, 116);
 }
 
 .blog_subpage_body {
@@ -81,9 +80,10 @@ body {
 }
 
 .contain_box {
+  padding: 15px;
+  background-color: white;
   margin-top: 5px;
   margin-bottom: 5px;
-  padding-bottom: 5px;
 }
 
 .sub_contain_box_parents {
@@ -195,6 +195,20 @@ a:active {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Make the layout more responsive */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+  }
 }
 
 .column {
@@ -216,11 +230,11 @@ a:active {
 
 /* Title bar styles */
 .title-bar {
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .title-bar-line {
-  height: 5px;
+  height: 4px;
   margin: 0;
 }
 
@@ -272,29 +286,36 @@ a:active {
 }
 
 .theme-formula {
-  background-color: rgb(202, 255, 237);
+  background-color: rgb(252, 252, 252);
+  border-top: 1px solid #eaeaea;
+}
+
+/* Theme for 2025 and 2024 sections */
+.theme-2025 {
+  background-color: #6b46c1;
+  color: white;
+}
+
+.theme-2024 {
+  background-color: #e53e3e;
+  color: white;
 }
 
 .section-container {
   margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .event-banner {
   background-color: #FDB515;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 15px;
+  margin: 15px 0 5px;
+  border-radius: 6px;
   text-align: center;
-}
-
-/* Make the layout more responsive */
-@media (max-width: 768px) {
-  .page-container {
-    flex-direction: column;
-  }
-
-  .column {
-    width: 100%;
-  }
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Animation for hover effects */
@@ -304,72 +325,15 @@ a:active {
 }
 
 .scale_bigger:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* Enhanced styling for better visual appeal */
 body.personal_space_body {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-}
-
-.page-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section-container {
-  margin-bottom: 30px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.title-bar {
-  margin-bottom: 0;
-}
-
-.contain_box {
-  padding: 15px;
-  background-color: white;
-}
-
-/* Improved title bar styling */
-.title-bar-line {
-  height: 4px;
-}
-
-.title-container {
-  padding: 10px 0;
-}
-
-/* Enhanced theme styles */
-.theme-mint {
-  background-color: rgb(202, 255, 237);
-}
-
-.theme-red {
-  background-color: red;
-}
-
-.theme-red h2 {
-  color: white;
-}
-
-.theme-purple {
-  background-color: rgb(102, 8, 116);
-}
-
-.theme-purple h2 {
-  color: white;
-}
-
-.theme-formula {
-  background-color: rgb(252, 252, 252);
-  border-top: 1px solid #eaeaea;
+  border: 5px solid #ffffff;
 }
 
 /* Style for math formulas */
@@ -426,21 +390,6 @@ audio {
   padding: 8px 0;
   font-size: 13px;
   color: #666;
-}
-
-/* Event banner enhancement */
-.event-banner {
-  background-color: #FDB515;
-  padding: 15px;
-  margin: 15px 0 5px;
-  border-radius: 6px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Animation refinements */
-.scale_bigger:hover {
-  transform: scale(1.05);
 }
 
 /* Ensure math is centered */
@@ -638,15 +587,4 @@ audio {
   color: #666;
   font-size: 14px;
   margin-bottom: 4px;
-}
-
-/* Theme for 2025 and 2024 sections */
-.theme-2025 {
-  background-color: #6b46c1;
-  color: white;
-}
-
-.theme-2024 {
-  background-color: #e53e3e;
-  color: white;
 }
