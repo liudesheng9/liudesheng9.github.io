@@ -72,6 +72,14 @@ body {
   border: 5px solid rgb(102, 8, 116);
 }
 
+.blog_subpage_body {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0 20px 20px 20px;
+  border: 5px solid rgb(102, 8, 116);
+}
+
 .contain_box {
   margin-top: 5px;
   margin-bottom: 5px;
