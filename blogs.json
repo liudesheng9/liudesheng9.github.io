@@ -1,12 +1,6 @@
 {
     "blogs": [
         {
-            "title": "Test Math Rendering",
-            "date": "2023-12-01",
-            "fileName": "test_math_rendering.md",
-            "slug": "test-math-rendering"
-        },
-        {
             "title": "Debt Overhang",
             "date": "2025-03-30",
             "fileName": "Debt_overhang.md",
