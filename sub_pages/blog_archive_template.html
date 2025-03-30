@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet" />
+    <link href="../styles/math.css" rel="stylesheet" />
+    <script src="../href_motion.js"></script>
+
+    <title>Blog Archive</title>
+</head>
+
+<body class="blog_subpage_body">
+    <nav class="outer_links">
+        <ol>
+            <li class="outer_link"><a class="scale_bigger" href="https://github.com/liudesheng9/" target="_blank"
+                    rel="noopener">Github</a>
+            </li>
+            <li class="outer_link"><a class="scale_bigger" href="../personal_space.html" target="_top">Personal
+                    Space</a></li>
+            <li class="outer_link"><a class="scale_bigger" href="../index.html" target="_top">Home</a></li>
+        </ol>
+    </nav>
+    <h1>My Blogs</h1>
+
+    <div class="page-container">
+        <div class="column" style="flex: 1;">
+            <!-- BLOG_CONTENT_PLACEHOLDER -->
+        </div>
+    </div>
+
+    <footer>
+        <p>This blog archive is automatically generated. Last updated: <span id="last-updated"></span></p>
+        <script>
+            document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        </script>
+    </footer>
+</body>
+
+</html>
