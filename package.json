@@ -6,7 +6,7 @@
     "scripts": {
         "build": "node blog-generator.js",
         "serve": "http-server . -p 55000",
-        "new-post": "node add-blog.js",
+        "new": "node add-blog.js",
         "start": "node blog-generator.js && http-server . -p 55000",
         "install-deps": "node install.js",
         "deploy": "node blog-generator.js"

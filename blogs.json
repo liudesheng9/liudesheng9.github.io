@@ -1,28 +1,34 @@
 {
-    "blogs": [
-        {
-            "title": "Debt Overhang",
-            "date": "2025-03-30",
-            "fileName": "Debt_overhang.md",
-            "slug": "debt-overhang"
-        },
-        {
-            "title": "Model Writeup (Twisting Pecking Order Theory)",
-            "date": "2025-03-30",
-            "fileName": "Model_Writeup_Twisting_Pecking_Order_Theory.md",
-            "slug": "model-writeup-twisting-pecking-order-theory"
-        },
-        {
-            "title": "[Paper Reading] Lian Chen Credit Cycle 2024 Part1 Basic Findings",
-            "date": "2025-01-07",
-            "fileName": "Lian_Chen_Credit_Cycle_2024_Part1_Basic_Ideas.md",
-            "slug": "lian-chen-credit-cycle-2024-part1"
-        },
-        {
-            "title": "Company utility function with 2 interventions",
-            "date": "2024-11-29",
-            "fileName": "Company_utility_function_with_2_interventions.md",
-            "slug": "company-utility-function-with-2-interventions"
-        }
-    ]
+  "blogs": [
+    {
+      "title": "Debt Overhang",
+      "date": "2025-03-30",
+      "fileName": "Debt_overhang.md",
+      "slug": "debt-overhang"
+    },
+    {
+      "title": "Model Writeup (Twisting Pecking Order Theory)",
+      "date": "2025-03-30",
+      "fileName": "Model_Writeup_Twisting_Pecking_Order_Theory.md",
+      "slug": "model-writeup-twisting-pecking-order-theory"
+    },
+    {
+      "title": "Downside Protection",
+      "date": "2025-03-30",
+      "fileName": "downside_protection.md",
+      "slug": "downside-protection"
+    },
+    {
+      "title": "[Paper Reading] Lian Chen Credit Cycle 2024 Part1 Basic Findings",
+      "date": "2025-01-07",
+      "fileName": "Lian_Chen_Credit_Cycle_2024_Part1_Basic_Ideas.md",
+      "slug": "lian-chen-credit-cycle-2024-part1"
+    },
+    {
+      "title": "Company utility function with 2 interventions",
+      "date": "2024-11-29",
+      "fileName": "Company_utility_function_with_2_interventions.md",
+      "slug": "company-utility-function-with-2-interventions"
+    }
+  ]
 }
