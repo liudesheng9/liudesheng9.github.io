@@ -1,6 +1,12 @@
 {
   "blogs": [
     {
+      "title": "[AI Reading] Random Expected Utility",
+      "date": "2025-03-31",
+      "fileName": "ai_reading_random_expected_utility.md",
+      "slug": "ai-reading-random-expected-utility"
+    },
+    {
       "title": "[Noun Explanation] Debt Overhang",
       "date": "2025-03-30",
       "fileName": "Debt_overhang.md",
