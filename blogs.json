@@ -1,19 +1,19 @@
 {
   "blogs": [
     {
-      "title": "Debt Overhang",
+      "title": "[Noun Explanation] Debt Overhang",
       "date": "2025-03-30",
       "fileName": "Debt_overhang.md",
       "slug": "debt-overhang"
     },
     {
-      "title": "Model Writeup (Twisting Pecking Order Theory)",
+      "title": "[AI Reading] Model Writeup (Twisting Pecking Order Theory)",
       "date": "2025-03-30",
       "fileName": "Model_Writeup_Twisting_Pecking_Order_Theory.md",
       "slug": "model-writeup-twisting-pecking-order-theory"
     },
     {
-      "title": "Downside Protection",
+      "title": "[Noun Explanation] Downside Protection",
       "date": "2025-03-30",
       "fileName": "downside_protection.md",
       "slug": "downside-protection"
